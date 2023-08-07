@@ -1,6 +1,6 @@
 <template>
   <div class="logo">
-    <img src="../img/logo.png" alt="" />
+    <a href="/"><img src="../img/logo.png" alt="" /></a>
   </div>
   <div class="container" :class="{ 'right-panel-active': isSignUpActive }" id="container">
     <div class="form-container sign-up-container">
@@ -68,6 +68,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
   margin: -20px 0 50px;
+  overflow: hidden;
 }
 
 h1 {
@@ -85,6 +86,10 @@ p {
   line-height: 20px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
+}
+
+text {
+  /* line-break: ; */
 }
 
 img {
@@ -277,11 +282,4 @@ input {
   height: 40px;
   width: 40px;
 }
-
-/*   width: 180px;
-    /* display: flex; */
-/* margin-bottom: 200px; */
-/* top: -140px; */
-/* position: relative; */
-/* left: -450px; */
 </style>
