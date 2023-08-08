@@ -1,9 +1,9 @@
 <template>
-  <Login />
+  <Home />
 </template>
 
 <script setup>
-import Login from '../components/LoginSection.vue'
+import Home from '../components/HomeSection.vue'
 </script>
 
 <style scoped></style>

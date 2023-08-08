@@ -1,38 +1,40 @@
 <template>
-  <div class="logo">
-    <a href="/"><img src="../img/logo.png" alt="" /></a>
-  </div>
-  <div class="container" :class="{ 'right-panel-active': isSignUpActive }" id="container">
-    <div class="form-container sign-up-container">
-      <form action="#">
-        <h1>Create Account</h1>
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <input type="password" placeholder="Password" required />
-        <button>Sign Up</button>
-      </form>
+  <div class="wrap">
+    <div class="logo">
+      <a href="/home"><img src="../img/logo.png" alt="" /></a>
     </div>
-    <div class="form-container sign-in-container">
-      <form action="#">
-        <h1>Sign in</h1>
-        <input type="email" placeholder="Email" required />
-        <input type="password" placeholder="Password" required />
-        <button>Sign In</button>
-      </form>
-    </div>
-    <div class="overlay-container">
-      <div class="overlay">
-        <div class="overlay-panel overlay-left">
-          <h1>Welcome Back!</h1>
-          <p>To keep connected with us please login with your personal info</p>
-          <button class="ghost" @click="toggleSignUp">Sign In</button>
-        </div>
-        <div class="overlay-panel overlay-right">
-          <h1>Hello, investor!</h1>
-          <p>
-            Please provide your personal details to begin your journey with us on CryptoTracker.
-          </p>
-          <button class="ghost" @click="toggleSignUp">Sign Up</button>
+    <div class="container" :class="{ 'right-panel-active': isSignUpActive }" id="container">
+      <div class="form-container sign-up-container">
+        <form action="#">
+          <h1>Create Account</h1>
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <button>Sign Up</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form action="#">
+          <h1>Sign in</h1>
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <button>Sign In</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>To keep connected with us please login with your personal info</p>
+            <button class="ghost" @click="toggleSignUp">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hello, investor!</h1>
+            <p>
+              Please provide your personal details to begin your journey with us on CryptoTracker.
+            </p>
+            <button class="ghost" @click="toggleSignUp">Sign Up</button>
+          </div>
         </div>
       </div>
     </div>
@@ -49,14 +51,14 @@ const toggleSignUp = () => {
 }
 </script>
 
-<style setup>
+<style scoped>
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 * {
   box-sizing: border-box;
 }
 
-body {
+.wrap {
   background-image: url(../img/login-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -67,7 +69,6 @@ body {
   align-items: center;
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
-  margin: -20px 0 50px;
   overflow: hidden;
 }
 
@@ -86,10 +87,6 @@ p {
   line-height: 20px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
-}
-
-text {
-  /* line-break: ; */
 }
 
 img {
