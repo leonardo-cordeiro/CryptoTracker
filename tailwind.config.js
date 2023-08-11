@@ -4,7 +4,11 @@ module.exports = {
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   content: [],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif']
+      }
+    }
   },
   plugins: []
 }

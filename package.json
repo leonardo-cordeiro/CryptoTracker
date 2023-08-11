@@ -10,7 +10,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.15",
+    "@heroicons/vue": "^2.0.18",
     "pinia": "^2.1.4",
+    "tw-elements": "^1.0.0-beta3",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
