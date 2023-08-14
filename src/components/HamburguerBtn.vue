@@ -1,7 +1,7 @@
 <template>
   <Disclosure as="nav" class="" v-slot="{ open }">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-      <div class="relative flex h-16 items-center justify-between">
+      <div class="relative flex h-16 items-center justify-between mr-5">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
           <DisclosureButton
@@ -67,6 +67,6 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 const navigation = [
   { name: 'Sign In', href: '/login', current: true },
   { name: 'Services', href: '#services', current: false },
-  { name: 'Contact', href: '#', current: false }
+  { name: 'Contact', href: '#contact', current: false }
 ]
 </script>
