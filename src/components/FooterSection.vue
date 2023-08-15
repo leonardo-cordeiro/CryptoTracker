@@ -1,28 +1,47 @@
 <template>
-  <!--Footer container-->
-  <footer class="text-center text-white bg-[#0a4275]">
-    <div class="container p-6">
-      <div class="">
-        <p class="text-center xl:ml-96">
-          <span class="mr-4">Register for free</span>
-          <a href="/login"
-            ><button
-              type="button"
-              class="inline-block rounded-full border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-              data-te-ripple-init
-              data-te-ripple-color="light"
-            >
-              Sign up!
-            </button>
-          </a>
-        </p>
+  <footer class="px-4 py-8 dark:bg-sky-950 dark:text-gray-400">
+    <div
+      class="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0"
+    >
+      <div class="flex flex-row pr-3 space-x-4 sm:space-x-8">
+        <div class="flex items-center justify-center flex-shrink-0 w-48">
+          <a href="/"><img class="" src="src/img/logo.png" alt="" /></a>
+        </div>
+        <ul class="flex flex-wrap items-center space-x-4 sm:space-x-8">
+          <li class="bg-gray-900 p-2 rounded hover:text-white">
+            <a rel="noopener noreferrer" href="#">Register</a>
+          </li>
+          <li class="hover:text-white">
+            <a rel="noopener noreferrer" href="#">Privacy</a>
+          </li>
+        </ul>
       </div>
-    </div>
-
-    <!--Copyright section-->
-    <div class="p-4 text-center bg-[#09355d]">
-      © 2023 Copyright:
-      <a class="text-white" href="">CryptoTracker</a>
+      <ul class="flex flex-wrap pl-3 space-x-4 sm:space-x-8">
+        <li>
+          <a
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/leonardo-cordeiro28/"
+            target="_blank"
+            ><img class="h-10" src="src/icons/linkedin.png" alt="logo linkedin"
+          /></a>
+        </li>
+        <li>
+          <a
+            rel="noopener noreferrer"
+            href="https://github.com/leonardo-cordeiro/CryptoTracker"
+            target="_blank"
+            ><img class="h-10 bg-white rounded-full" src="src/icons/github.png" alt="logo github"
+          /></a>
+        </li>
+        <li>
+          <a
+            rel="noopener noreferrer"
+            href="https://www.upwork.com/freelancers/~017638c917b8a10f78"
+            target="_blank"
+            ><img class="h-10" src="src/icons/upwork.png" alt=""
+          /></a>
+        </li>
+      </ul>
     </div>
   </footer>
 </template>
