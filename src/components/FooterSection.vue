@@ -22,7 +22,7 @@
     <!--Copyright section-->
     <div class="p-4 text-center bg-[#09355d]">
       © 2023 Copyright:
-      <a class="text-white" href="https://tailwind-elements.com/">CryptoTracker</a>
+      <a class="text-white" href="">CryptoTracker</a>
     </div>
   </footer>
 </template>

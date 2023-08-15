@@ -1,25 +1,9 @@
 <template>
   <div class="bg-[url('src/img/background.jpg')] h-screen overflow-hidden">
     <nav
-      class="relative flex w-full flex-wrap items-center justify-between py-2 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:py-4"
-      data-te-navbar-ref
+      class="fixed flex z-30 bg-[#080726] sm:bg-opacity-70 w-full flex-wrap items-center justify-between hover:text-neutral-700 focus:text-neutral-700 lg:py-2"
     >
-      <div class="flex w-full flex-wrap items-center justify-between px-3">
-        <div>
-          <a href="/">
-            <img
-              class="mr-2"
-              src="src/img/logo.png"
-              style="height: 80px"
-              alt="TE Logo"
-              loading="lazy"
-            />
-          </a>
-        </div>
-
-        <!-- Hamburger button for mobile view -->
-        <hamburguerBtn />
-      </div>
+      <hamburguerBtn />
     </nav>
 
     <section class="background-radial-gradient text-center lg:text-left">
@@ -28,7 +12,7 @@
           <div class="flex h-full items-center justify-center">
             <div class="max-w-[800px] px-6 py-6 text-center text-white md:py- md:px-12">
               <h2
-                class="mb-12 text-5xl font-bold leading-tight tracking-tight mt-32 md:text-6xl md:mt-72 xl:text-7xl xl:mt-48"
+                class="mb-12 text-5xl font-bold leading-tight tracking-tight mt-32 md:text-6xl md:mt-72 xl:text-7xl xl:mt-80"
               >
                 Track and Analyze Cryptocurrencies
               </h2>
@@ -79,7 +63,7 @@
     </div>
   </div>
 
-  <section class="py-24 lg:py-28 overflow-hidden bg-[#080726]">
+  <section class="py-24 lg:py-28 overflow-hidden bg-sky-950">
     <p
       class="mb-6 font-bold uppercase text-primary dark:text-primary-400 text-center text-[#0991b1]"
     >
@@ -142,79 +126,7 @@
     </div>
   </section>
 
-  <div class="min-h-screen bg-[#080726] py-6 flex flex-col justify-center sm:py-12" id="contact">
-    <div class="relative py-3 sm:max-w-xl sm:mx-auto">
-      <div
-        class="absolute inset-0 bg-[#0991b1] shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"
-      ></div>
-      <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
-        <div class="max-w-md mx-auto">
-          <div>
-            <h1 class="text-3xl font-extrabold">Contact</h1>
-            <p class="mt-3">
-              Have questions or feedback? Need assistance with technical matters? Interested in
-              learning more about our Business plan? We're here to help. Drop us a line and we'll
-              get back to you promptly.
-            </p>
-            <hr class="mt-3 border-gray-300" />
-          </div>
-          <div class="divide-y divide-gray-200">
-            <form
-              class="pt-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7 -mb-8"
-            >
-              <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-first-name"
-              >
-                Name <span class="text-red-500">*</span>
-              </label>
-              <input
-                required
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                id="grid-first-name"
-                type="text"
-                placeholder="Name"
-              />
-
-              <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-first-name"
-              >
-                Email <span class="text-red-500">*</span>
-              </label>
-              <input
-                required
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                id="grid-first-name"
-                type="email"
-                placeholder="Email"
-              />
-
-              <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-first-name"
-              >
-                Message <span class="text-red-500">*</span>
-              </label>
-              <textarea
-                required
-                class="resize-y py-3 px-4 border focus:outline-none rounded-md w-full bg-gray-200"
-                placeholder="Your message..."
-              ></textarea>
-
-              <div class="flex items-end justify-end">
-                <button
-                  class="bg-[#0991b1] text-white font-semibold py-2 px-4 rounded hover:text-black"
-                >
-                  Send
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <ContactSection />
 
   <FooterSection />
 </template>
@@ -223,6 +135,7 @@
 import HamburguerBtn from '../components/HamburguerBtn.vue'
 import { ArrowTrendingUpIcon, ChartBarIcon, WalletIcon } from '@heroicons/vue/20/solid'
 import FooterSection from '../components/FooterSection.vue'
+import ContactSection from '../components/ContactSection.vue'
 
 const features = [
   {
