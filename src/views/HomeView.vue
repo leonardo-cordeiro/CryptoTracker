@@ -1,8 +1,12 @@
 <template>
   <div>
+    <button class="fixed z-10 bg-sky-950 p-1 rounded-full bottom-10 right-8" @click="scrollToTop">
+      <img src="src/icons/up-arrow.png" alt="scroll-up icon" />
+    </button>
     <div class="bg-[url('src/img/background.jpg')] h-screen overflow-hidden">
       <nav
-        class="fixed flex z-30 bg-[#080726] sm:bg-opacity-70 w-full flex-wrap items-center justify-between hover:text-neutral-700 focus:text-neutral-700 lg:py-2"
+        :class="scrollY == 0 ? 'bg-[#ff0000]' : 'bg-[#080726]'"
+        class="fixed flex z-30 sm:bg-opacity-70 w-full flex-wrap items-center justify-between hover:text-neutral-700 focus:text-neutral-700 lg:py-2"
       >
         <hamburguerBtn />
       </nav>
@@ -162,6 +166,10 @@ const features = [
     icon: WalletIcon
   }
 ]
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
 </script>
 
 <style scoped></style>
