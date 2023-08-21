@@ -1,14 +1,18 @@
 <template>
   <div>
-    <button class="fixed z-10 bg-sky-950 p-1 rounded-full bottom-10 right-8" @click="scrollToTop">
+    <button
+      class="fixed z-10 bg-sky-950 p-1 rounded-full bottom-10 right-8"
+      v-show="showScrollButton"
+      @click="scrollToTop"
+    >
       <img src="src/icons/up-arrow.png" alt="scroll-up icon" />
     </button>
     <div class="bg-[url('src/img/background.jpg')] h-screen overflow-hidden">
       <nav
-        :class="scrollY == 0 ? 'bg-[#ff0000]' : 'bg-[#080726]'"
-        class="fixed flex z-30 sm:bg-opacity-70 w-full flex-wrap items-center justify-between hover:text-neutral-700 focus:text-neutral-700 lg:py-2"
+        :class="[navClass]"
+        class="fixed flex z-30 sm:bg-opacity-90 w-full flex-wrap items-center justify-between hover:text-neutral-700 focus:text-neutral-700 lg:py-2"
       >
-        <hamburguerBtn />
+        <HamburguerBtn />
       </nav>
 
       <section class="background-radial-gradient text-center lg:text-left">
@@ -77,7 +81,6 @@
         Features
       </p>
       <h2 class="mb-6 text-3xl font-bold text-center pb-16 text-white">Why is it so great?</h2>
-
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap -m-8">
           <BaseCard
@@ -119,6 +122,28 @@ import { ArrowTrendingUpIcon, ChartBarIcon, WalletIcon } from '@heroicons/vue/20
 import FooterSection from '../components/FooterSection.vue'
 import ContactSection from '../components/ContactSection.vue'
 import BaseCard from '../components/BaseCard.vue'
+import { ref, onBeforeUnmount, onMounted } from 'vue'
+
+const showScrollButton = ref(false)
+const navClass = ref('bg-[#080726]')
+
+const updateVisibility = () => {
+  showScrollButton.value = window.scrollY > 100
+  navClass.value = window.scrollY > 100 ? 'bg-[#080726]' : 'bg-transparent'
+}
+
+onMounted(() => {
+  updateVisibility()
+  window.addEventListener('scroll', () => {
+    updateVisibility()
+  })
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', () => {
+    updateVisibility()
+  })
+})
 
 const features = [
   {
