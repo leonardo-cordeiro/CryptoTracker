@@ -77,59 +77,32 @@
         Features
       </p>
       <h2 class="mb-6 text-3xl font-bold text-center pb-16 text-white">Why is it so great?</h2>
+
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap -m-8">
-          <div class="w-full md:w-1/3 p-8">
-            <div class="max-w-xs mx-auto text-center">
-              <img class="mx-auto mb-9" src="src/icons/research.png" alt="" />
-              <h3 class="mb-4 text-xl font-semibold tracking-tight text-white">Watchlist:</h3>
-              <p class="mb-8 tracking-tight text-white">
-                Create a personalized watchlist of your favorite cryptocurrencies, keeping them at
-                your fingertips for quick reference.
-              </p>
-              <a
-                class="font-semibold bg-white p-2 rounded-lg text-[#0991b1] hover:text-[#0991b1] tracking-tight transition duration-200"
-                href="/login"
-                >Get Started</a
-              >
-            </div>
-          </div>
+          <BaseCard
+            title="Watchlist:"
+            description="Create a personalized watchlist of your favorite cryptocurrencies, keeping them at
+                  your fingertips for quick reference."
+            img="src/icons/research.png"
+            btnText="Get Started"
+          />
 
-          <div class="w-full md:w-1/3 p-8">
-            <div class="max-w-xs mx-auto text-center">
-              <img class="mx-auto mb-9 w-10" src="src/icons/cryptocurrency.png" alt="" />
-              <h3 class="mb-4 text-xl font-semibold tracking-tight text-white">
-                Multiple Cryptocurrencies:
-              </h3>
-              <p class="mb-8 tracking-tight text-white">
-                Track a diverse range of cryptocurrencies, from the most popular to emerging
-                altcoins.
-              </p>
-              <br />
-              <a
-                class="font-semibold bg-white p-2 rounded-lg text-[#0991b1] hover:text-[#0991b1] tracking-tight transition duration-200"
-                href="/login"
-                >Get Started</a
-              >
-            </div>
-          </div>
-          <div class="w-full md:w-1/3 p-8">
-            <div class="max-w-xs mx-auto text-center">
-              <img class="mx-auto mb-9" src="src/icons/time.png" alt="" />
-              <h3 class="mb-4 text-xl font-semibold tracking-tight text-white">
-                Real-Time Price Updates:
-              </h3>
-              <p class="mb-8 tracking-tight text-white">
-                Get instant updates on cryptocurrency prices, ensuring you're always aware of the
-                latest market movements.
-              </p>
-              <a
-                class="font-semibold bg-white p-2 rounded-lg text-[#0991b1] hover:text-[#0991b1] tracking-tight transition duration-200"
-                href="/login"
-                >Get Started</a
-              >
-            </div>
-          </div>
+          <BaseCard
+            title="Multiple Cryptocurrencies:"
+            description="Track a diverse range of cryptocurrencies, from the most popular to emerging
+                altcoins.  Keeping track will never be an issue"
+            img="src/icons/cryptocurrency.png"
+            btnText="Get Started"
+          />
+
+          <BaseCard
+            title="Real-Time Price Updates:"
+            description="Get instant updates on cryptocurrency prices, ensuring you're always aware of the
+                latest market movements."
+            img="src/icons/time.png"
+            btnText="Get Started"
+          />
         </div>
       </div>
     </section>
@@ -145,6 +118,7 @@ import HamburguerBtn from '../components/HamburguerBtn.vue'
 import { ArrowTrendingUpIcon, ChartBarIcon, WalletIcon } from '@heroicons/vue/20/solid'
 import FooterSection from '../components/FooterSection.vue'
 import ContactSection from '../components/ContactSection.vue'
+import BaseCard from '../components/BaseCard.vue'
 
 const features = [
   {
