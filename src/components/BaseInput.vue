@@ -40,7 +40,7 @@
     width: 30rem;
   }
   input {
-    border: 1px solid #ccc;
+    border: 1px solid #190588;
     border-radius: 24px;
     display: block;
     font-size: 1.2rem;
@@ -53,7 +53,7 @@
   
   input:focus {
     border-width: 2px;
-    border-color: hsla(160, 100%, 37%, 0.2);
+    border-color: hsla(253, 78%, 29%, 0.2);
     outline: none;
   }
   
@@ -62,7 +62,7 @@
   }
   
   button {
-    background: hsla(160, 100%, 37%, 0.2);
+    background: hsla(229, 97%, 29%, 0.2);
     border-radius: 24px;
     border: none;
     cursor: pointer;
