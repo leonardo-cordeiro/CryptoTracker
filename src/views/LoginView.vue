@@ -6,9 +6,11 @@
       class="lg:w-2/6 mx-auto md:w-1/2 bg-[#080726] bg-opacity-50 rounded-lg p-8 flex flex-col w-full mt-10 md:mt-0"
     >
       <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-        <a href="/">
-          <img class="mx-auto lg:h-28 xl:h-28 w-auto" src="src/img/logo.png" alt="Your Company"
-        /></a>
+        <RouterLink to="/">
+          <a href="/">
+            <img class="mx-auto lg:h-28 xl:h-28 w-auto" src="src/img/logo.png" alt="Your Company"
+          /></a>
+        </RouterLink>
         <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">
           Sign in to your account
         </h2>
@@ -63,9 +65,11 @@
         <p class="mt-10 text-center text-sm text-gray-500">
           Not a member?
           {{ ' ' }}
-          <a href="/signup" class="font-semibold leading-6 text-[#e3cc63] hover:text-[#c9ae36]"
-            >Sign Up!</a
-          >
+          <RouterLink to="/signup">
+            <a href="/signup" class="font-semibold leading-6 text-[#e3cc63] hover:text-[#c9ae36]"
+              >Sign Up!</a
+            >
+          </RouterLink>
         </p>
       </div>
     </div>

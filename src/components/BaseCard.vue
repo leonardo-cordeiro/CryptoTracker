@@ -6,11 +6,13 @@
       <p class="mb-8 tracking-tight text-black">
         {{ description }}
       </p>
-      <a
-        class="font-semibold bg-[#0991b1] p-2 rounded-lg text-white hover:text-[#0991b1] tracking-tight transition duration-200"
-        href="/login"
-        >{{ btnText }}</a
-      >
+      <RouterLink to="/login">
+        <a
+          class="font-semibold bg-[#0991b1] p-2 rounded-lg text-white hover:text-[#0991b1] tracking-tight transition duration-200"
+          href="/login"
+          >{{ btnText }}</a
+        >
+      </RouterLink>
     </div>
   </div>
 </template>

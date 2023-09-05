@@ -9,7 +9,9 @@
         </div>
         <ul class="flex flex-wrap items-center space-x-4 sm:space-x-8">
           <li class="bg-gray-900 p-2 rounded hover:text-white">
-            <a rel="noopener noreferrer" href="/login">Register</a>
+            <RouterLink to="/login">
+              <a rel="noopener noreferrer" href="/login">Register</a></RouterLink
+            >
           </li>
           <li class="hover:text-white">
             <a rel="noopener noreferrer" href="#">Privacy</a>
