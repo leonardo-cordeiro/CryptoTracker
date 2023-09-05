@@ -7,6 +7,7 @@
     >
       <img src="src/icons/up-arrow.png" alt="scroll-up icon" />
     </button>
+
     <div class="bg-[url('src/img/background.jpg')] h-screen overflow-hidden">
       <nav
         :class="[navClass]"
@@ -117,11 +118,11 @@
 </template>
 
 <script setup>
-import HamburguerBtn from '../components/HamburguerBtn.vue'
+import HamburguerBtn from '@/components/HamburguerBtn.vue'
 import { ArrowTrendingUpIcon, ChartBarIcon, WalletIcon } from '@heroicons/vue/20/solid'
-import FooterSection from '../components/FooterSection.vue'
-import ContactSection from '../components/ContactSection.vue'
-import BaseCard from '../components/BaseCard.vue'
+import FooterSection from '@/components/FooterSection.vue'
+import ContactSection from '@/components/ContactSection.vue'
+import BaseCard from '@/components/BaseCard.vue'
 import { ref, onBeforeUnmount, onMounted } from 'vue'
 
 const showScrollButton = ref(false)
@@ -129,7 +130,7 @@ const navClass = ref('bg-[#080726]')
 
 const updateVisibility = () => {
   showScrollButton.value = window.scrollY > 100
-  navClass.value = window.scrollY > 100 ? 'bg-[#080726]' : 'bg-transparent'
+  navClass.value = window.scrollY > 200 ? 'bg-[#080726]' : 'bg-transparent'
 }
 
 onMounted(() => {

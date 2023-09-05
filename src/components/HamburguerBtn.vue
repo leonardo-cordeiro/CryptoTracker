@@ -77,10 +77,11 @@
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
+import { ref } from 'vue'
 
-const navigation = [
+const navigation = ref([
   { name: 'Sign In', href: '/login', current: true },
   { name: 'Services', href: '#services', current: false },
   { name: 'Contact', href: '#contact', current: false }
-]
+])
 </script>

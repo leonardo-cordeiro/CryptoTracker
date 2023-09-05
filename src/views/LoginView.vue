@@ -15,7 +15,7 @@
       </div>
 
       <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form class="space-y-6" action="#" method="POST">
+        <form @submit.prevent="login" class="space-y-6" action="#" method="POST">
           <div>
             <label for="email" class="block text-sm font-medium leading-6 text-[#e3cc63]"
               >Email address</label
@@ -37,11 +37,6 @@
               <label for="password" class="block text-sm font-medium leading-6 text-[#e3cc63]"
                 >Password</label
               >
-              <!-- <div class="text-sm">
-                <a href="#" class="font-semibold text-[#e3cc63] hover:text-[#c9ae36]"
-                  >Forgot password?</a
-                >
-              </div> -->
             </div>
             <div class="mt-2">
               <input
@@ -58,7 +53,7 @@
           <div>
             <button
               type="submit"
-              class="flex w-full justify-center rounded-md bg-[#e3cc63] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#c9ae36] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              class="flex w-full justify-center rounded-md bg-[#e3cc63] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#c9ae36] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             >
               Sign in
             </button>
