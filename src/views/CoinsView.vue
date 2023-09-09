@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen flex-col flex justify-center items-center font-mukta bg-cover bg-center bg-[url('src/img/background.jpg')]"
+    class="h-screen flex-col flex justify-center items-center font-mukta bg-repeat  bg-[url('src/img/background.jpg')]"
   >
     <h1 class="text-6xl mb-10 mt-10 text-yellow-400 font-bebas-neue">Coins</h1>
     <BaseInput v-model="search" @search="onreadCoins" placeholder="Pesquise a moeda" />
@@ -33,7 +33,13 @@
       id="right-arrow"
       class="text-3xl mt-10 hover:bg-blue-500 text-white py-2 px-4 rounded-full"
     >
-      ➡️
+      <img src="" alt="">
+    </button>
+    <button
+      id="right-arrow"
+      class="text-3xl mt-10 hover:bg-blue-500 text-white py-2 px-4 rounded-full"
+    >
+      <img src="" alt="">
     </button>
   </div>
 </template>
