@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-screen flex-col flex justify-center items-center font-mukta bg-repeat  bg-[url('src/img/background.jpg')]"
+    class="min-h-screen flex-col flex justify-center items-center font-mukta bg-repeat  bg-[url('src/img/background.jpg')]"
   >
     <h1 class="text-6xl mb-10 mt-10 text-yellow-400 font-bebas-neue">Coins</h1>
     <BaseInput v-model="search" @search="onreadCoins" placeholder="Pesquise a moeda" />
