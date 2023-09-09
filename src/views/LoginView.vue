@@ -30,6 +30,7 @@
                 autocomplete="email"
                 required=""
                 class="block w-full rounded-md py-1.5 text-gray-900ring-1 ring-inset placeholder:text-gray-900 sm:text-sm sm:leading-6"
+                v-model="login_form.email"
               />
             </div>
           </div>
@@ -48,6 +49,7 @@
                 autocomplete="current-password"
                 required=""
                 class="block w-full rounded-md py-1.5 text-gray-900ring-1 ring-inset placeholder:text-gray-900 sm:text-sm sm:leading-6"
+                v-model="login_form.password"
               />
             </div>
           </div>
@@ -55,6 +57,7 @@
           <div>
             <button
               type="submit"
+              value="Login"
               class="flex w-full justify-center rounded-md bg-[#e3cc63] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#c9ae36] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             >
               Sign in
@@ -76,6 +79,26 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+import { useStore } from '@/stores/counter.js'
+
+const login_form = ref({})
+const store = useStore()
+
+// const login = () => {
+//   store.dispatch('login', login_form.value)
+// }
+const login = async () => {
+  try {
+    await store.login(login_form.value)
+  } catch (error) {
+    // Lide com erros, se houver algum
+    console.log('Erro')
+  }
+}
+
+console.log(login_form, store)
+</script>
 
 <style scoped></style>

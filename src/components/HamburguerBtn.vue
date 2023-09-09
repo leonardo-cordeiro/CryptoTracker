@@ -30,7 +30,6 @@
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
-                <RouterLink to="/login"></RouterLink>
                 <a
                   v-for="item in navigation"
                   :key="item.name"
@@ -46,7 +45,7 @@
                   <template v-if="item.current">
                     <RouterLink :to="item.href">{{ item.name }}</RouterLink>
                   </template>
-                  <!-- Caso contrário, apenas renderiza o texto -->
+
                   <template v-else>
                     {{ item.name }}
                   </template></a

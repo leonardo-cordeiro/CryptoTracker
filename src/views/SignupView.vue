@@ -17,7 +17,7 @@
       </div>
 
       <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form class="space-y-6" action="#" method="POST">
+        <form class="space-y-6" @submit.prevent="register">
           <div>
             <label for="email" class="block text-sm font-medium leading-6 text-[#e3cc63]"
               >Email address</label
@@ -30,6 +30,7 @@
                 autocomplete="email"
                 required=""
                 class="block w-full rounded-md py-1.5 text-gray-900ring-1 ring-inset placeholder:text-gray-900 sm:text-sm sm:leading-6"
+                v-model="register_form.email"
               />
             </div>
           </div>
@@ -48,11 +49,12 @@
                 autocomplete="current-password"
                 required=""
                 class="block w-full rounded-md py-1.5 text-gray-900ring-1 ring-inset placeholder:text-gray-900 sm:text-sm sm:leading-6"
+                v-model="register_form.password"
               />
             </div>
           </div>
           <div>
-            <div class="flex items-center justify-between">
+            <!-- <div class="flex items-center justify-between">
               <label for="password" class="block text-sm font-medium leading-6 text-[#e3cc63]"
                 >Confirm Password</label
               >
@@ -66,12 +68,13 @@
                 required=""
                 class="block w-full rounded-md py-1.5 text-gray-900ring-1 ring-inset placeholder:text-gray-900 sm:text-sm sm:leading-6"
               />
-            </div>
+            </div> -->
           </div>
 
           <div>
             <button
               type="submit"
+              value="Register"
               class="flex w-full justify-center rounded-md bg-[#e3cc63] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#c9ae36] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Sign Up
@@ -93,6 +96,27 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+import { useStore } from '@/stores/counter.js'
+
+const register_form = ref({})
+const store = useStore()
+
+// const register = () => {
+//   store.dispatch('register', register_form.value)
+// }
+
+const register = async () => {
+  try {
+    await store.register(register_form.value)
+  } catch (error) {
+    // Lide com erros, se houver algum
+    console.log('Erro')
+  }
+}
+
+console.log(register_form)
+</script>
 
 <style scoped></style>

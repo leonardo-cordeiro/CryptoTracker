@@ -8,7 +8,7 @@
       </p>
       <RouterLink to="/login">
         <a
-          class="font-semibold bg-[#0991b1] p-2 rounded-lg text-white hover:text-[#0991b1] tracking-tight transition duration-200"
+          class="font-semibold bg-[#0991b1] p-2 rounded-lg text-white hover:text-[#eaeaea] tracking-tight transition duration-200"
           href="/login"
           >{{ btnText }}</a
         >

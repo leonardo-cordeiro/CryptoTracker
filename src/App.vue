@@ -1,5 +1,13 @@
 <script setup>
 import { RouterView } from 'vue-router'
+import { onBeforeMount } from 'vue'
+import { useStore } from '@/stores/counter'
+
+const store = useStore()
+
+onBeforeMount(() => {
+  store.fetchUser()
+})
 </script>
 
 <template>
