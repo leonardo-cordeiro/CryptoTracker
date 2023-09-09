@@ -12,12 +12,12 @@
           /></a>
         </RouterLink>
         <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">
-          Sign in to your account
+          Sign Up
         </h2>
       </div>
 
       <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form @submit.prevent="login" class="space-y-6" action="#" method="POST">
+        <form class="space-y-6" @submit.prevent="register">
           <div>
             <label for="email" class="block text-sm font-medium leading-6 text-[#e3cc63]"
               >Email address</label
@@ -30,7 +30,7 @@
                 autocomplete="email"
                 required=""
                 class="block w-full rounded-md py-1.5 text-gray-900ring-1 ring-inset placeholder:text-gray-900 sm:text-sm sm:leading-6"
-                v-model="login_form.email"
+                v-model="register_form.email"
               />
             </div>
           </div>
@@ -49,28 +49,45 @@
                 autocomplete="current-password"
                 required=""
                 class="block w-full rounded-md py-1.5 text-gray-900ring-1 ring-inset placeholder:text-gray-900 sm:text-sm sm:leading-6"
-                v-model="login_form.password"
+                v-model="register_form.password"
               />
             </div>
+          </div>
+          <div>
+            <!-- <div class="flex items-center justify-between">
+              <label for="password" class="block text-sm font-medium leading-6 text-[#e3cc63]"
+                >Confirm Password</label
+              >
+            </div>
+            <div class="mt-2">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                required=""
+                class="block w-full rounded-md py-1.5 text-gray-900ring-1 ring-inset placeholder:text-gray-900 sm:text-sm sm:leading-6"
+              />
+            </div> -->
           </div>
 
           <div>
             <button
               type="submit"
-              value="Login"
-              class="flex w-full justify-center rounded-md bg-[#e3cc63] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#c9ae36] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              value="Register"
+              class="flex w-full justify-center rounded-md bg-[#e3cc63] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#c9ae36] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
-              Sign in
+              Sign Up
             </button>
           </div>
         </form>
 
         <p class="mt-10 text-center text-sm text-gray-500">
-          Not a member?
+          Already a member?
           {{ ' ' }}
-          <RouterLink to="/signup">
-            <a href="/signup" class="font-semibold leading-6 text-[#e3cc63] hover:text-[#c9ae36]"
-              >Sign Up!</a
+          <RouterLink to="/login">
+            <a href="/login" class="font-semibold leading-6 text-[#e3cc63] hover:text-[#c9ae36]"
+              >Log In!</a
             >
           </RouterLink>
         </p>
@@ -83,22 +100,23 @@
 import { ref } from 'vue'
 import { useStore } from '@/stores/counter.js'
 
-const login_form = ref({})
+const register_form = ref({})
 const store = useStore()
 
-// const login = () => {
-//   store.dispatch('login', login_form.value)
+// const register = () => {
+//   store.dispatch('register', register_form.value)
 // }
-const login = async () => {
+
+const register = async () => {
   try {
-    await store.login(login_form.value)
+    await store.register(register_form.value)
   } catch (error) {
     // Lide com erros, se houver algum
     console.log('Erro')
   }
 }
 
-console.log(login_form, store)
+console.log(register_form)
 </script>
 
 <style scoped></style>
