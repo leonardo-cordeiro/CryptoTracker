@@ -21,7 +21,7 @@ const router = createRouter({
     },
     {
       path: '/coins',
-      name: 'Coins',
+      name: 'coins',
       component: () => import('@/views/CoinsView.vue'),
       meta: {
         requiresAuth: true
