@@ -87,7 +87,7 @@ const useAuthStore = defineStore('auth', {
           }
 
           if (router.isReady() && router.currentRoute.value.path === '/') {
-            router.push('/coins')
+            router.push('/')
           }
         }
       })

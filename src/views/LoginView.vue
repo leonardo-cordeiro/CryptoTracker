@@ -86,14 +86,10 @@ import { useStore } from '@/stores/counter.js'
 const login_form = ref({})
 const store = useStore()
 
-// const login = () => {
-//   store.dispatch('login', login_form.value)
-// }
 const login = async () => {
   try {
     await store.login(login_form.value)
   } catch (error) {
-    // Lide com erros, se houver algum
     console.log('Erro')
   }
 }

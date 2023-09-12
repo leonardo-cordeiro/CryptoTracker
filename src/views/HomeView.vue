@@ -146,6 +146,10 @@ onBeforeUnmount(() => {
   })
 })
 
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
 const features = [
   {
     name: 'Real-time Cryptocurrency Tracking:',
@@ -166,10 +170,6 @@ const features = [
     icon: WalletIcon
   }
 ]
-
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-}
 </script>
 
 <style scoped></style>

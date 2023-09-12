@@ -53,23 +53,6 @@
               />
             </div>
           </div>
-          <div>
-            <!-- <div class="flex items-center justify-between">
-              <label for="password" class="block text-sm font-medium leading-6 text-[#e3cc63]"
-                >Confirm Password</label
-              >
-            </div>
-            <div class="mt-2">
-              <input
-                id="password"
-                name="password"
-                type="password"
-                autocomplete="current-password"
-                required=""
-                class="block w-full rounded-md py-1.5 text-gray-900ring-1 ring-inset placeholder:text-gray-900 sm:text-sm sm:leading-6"
-              />
-            </div> -->
-          </div>
 
           <div>
             <button
@@ -103,15 +86,10 @@ import { useStore } from '@/stores/counter.js'
 const register_form = ref({})
 const store = useStore()
 
-// const register = () => {
-//   store.dispatch('register', register_form.value)
-// }
-
 const register = async () => {
   try {
     await store.register(register_form.value)
   } catch (error) {
-    // Lide com erros, se houver algum
     console.log('Erro')
   }
 }
