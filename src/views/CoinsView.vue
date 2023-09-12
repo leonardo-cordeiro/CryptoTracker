@@ -30,7 +30,6 @@
           </div>
           <div class="coin-name text-center">
             <h3 class="text-white text-lg uppercase p-1">{{ coin.name }}</h3>
-            <!-- <span class="text-blue-300">USD</span> -->
           </div>
 
           <div class="coin-price text-center">

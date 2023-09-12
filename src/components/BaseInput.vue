@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="search" class="form-container">
-    <input autofocus :placeholder="placeholder" v-model="value" />
+    <input autofocus placeholder="Search your coin" v-model="value" />
     <button type="submit" :disabled="length ? value.length !== length : false">&#128269;</button>
   </form>
 </template>
@@ -10,8 +10,7 @@ import { computed, reactive } from 'vue'
 
 const props = defineProps({
   modelValue: { type: String, required: true, default: '' },
-  length: { type: Number, required: false },
-  placeholder: { type: String, required: false, default: 'Pesquisar' }
+  length: { type: Number, required: false }
 })
 const emit = defineEmits(['update:modelValue', 'search'])
 const bindedObject = reactive({})

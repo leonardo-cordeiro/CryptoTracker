@@ -16,17 +16,17 @@
         <HamburguerBtn />
       </nav>
 
-      <section class="background-radial-gradient text-center lg:text-left">
+      <section class="background-radial-gradient text-center lg:text-left xl:mt-10">
         <div>
           <div class="">
             <div class="flex h-full items-center justify-center">
               <div class="max-w-[800px] px-6 py-6 text-center text-white md:py- md:px-12">
                 <h2
-                  class="mb-12 text-5xl font-bold leading-tight tracking-tight mt-32 md:text-6xl md:mt-80 xl:text-7xl xl:mt-60"
+                  class="mb-12 text-5xl font-bold leading-tight tracking-tight mt-32 md:text-6xl md:mt-80 lg:mt-40 xl:text-7xl xl:mt-52 xl:pb-2"
                 >
                   Track and Analyze Cryptocurrencies
                 </h2>
-                <p class="text-lg">
+                <p class="text-lg xl:text-xl">
                   Stay informed about the latest price movements, historical trends, and key
                   statistics of your favorite cryptocurrencies. Whether you're a seasoned investor
                   or just curious about the crypto market.
