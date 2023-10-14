@@ -2,6 +2,8 @@ import { createPinia, defineStore } from 'pinia'
 import router from '@/router'
 import { auth } from '@/firebase'
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from 'firebase/auth'
+import { doc, setDoc } from 'firebase/firestore/lite'
+import { db } from '../firebase'
 
 const useAuthStore = defineStore('auth', {
   state: () => ({
@@ -31,7 +33,7 @@ const useAuthStore = defineStore('auth', {
         return
       }
 
-      this.SET_USER(auth.currentUser)
+      this.user = auth.currentUser
 
       router.push('/coins')
     },
@@ -40,7 +42,9 @@ const useAuthStore = defineStore('auth', {
       const { email, password } = details
 
       try {
-        await createUserWithEmailAndPassword(auth, email, password)
+        await createUserWithEmailAndPassword(auth, email, password).then(async (userCredential) => {
+          await setDoc(doc(db, 'users', userCredential.user.uid), { email })
+        })
       } catch (error) {
         switch (error.code) {
           case 'auth/email-already-in-use':

@@ -26,22 +26,28 @@ const router = createRouter({
       meta: {
         requiresAuth: true
       }
+    },
+    {
+      path: '/wallet',
+      name: 'wallet',
+      component: () => import('@/views/WalletView.vue'),
+      meta: {
+        requiresAuth: true
+      }
     }
   ]
 })
 
 router.beforeEach((to, from, next) => {
-  if (to.path === '/login' && auth.currentUser) {
-    next('/coins')
-    return
-  }
+  // if (to.path === '/login' && auth.currentUser) {
+  // next('/')
+  // return
+  // }
 
   if (to.matched.some((record) => record.meta.requiresAuth) && !auth.currentUser) {
     next('/login')
     return
-  }
-
-  next()
+  } else next()
 })
 
 export default router

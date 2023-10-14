@@ -81,7 +81,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useStore } from '@/stores/counter.js'
+import { useStore } from '@/stores/users.js'
 
 const login_form = ref({})
 const store = useStore()
@@ -94,7 +94,7 @@ const login = async () => {
   }
 }
 
-console.log(login_form, store)
+// console.log(login_form, store)
 </script>
 
 <style scoped></style>

@@ -7,6 +7,7 @@
       logout
     </button>
 
+    <button @click="router.push('/wallet')">Wallet</button>
     <button
       class="fixed z-10 bg-sky-950 p-1 rounded-full bottom-5 right-0 xl:bottom-10 xl:right-8"
       v-show="showScrollButton"
@@ -41,6 +42,7 @@
               >{{ coin.price_change_percentage_24h }}</span
             >
           </div>
+          <button @click="addCoin(coin.id)" class="text-white">ADD</button>
         </div>
       </div>
 
@@ -67,7 +69,10 @@ import BaseInput from '@/components/BaseInput.vue'
 import { ref } from 'vue'
 import { computed } from 'vue'
 import { onBeforeMount } from 'vue'
-import { useStore } from '@/stores/counter'
+import { useStore } from '@/stores/users'
+import router from '../router'
+import { arrayUnion, doc, updateDoc } from 'firebase/firestore/lite'
+import { db } from '../firebase'
 
 const showScrollButton = ref(false)
 const store = useStore()
@@ -81,6 +86,12 @@ const logout = async () => {
   } catch (error) {
     console.log('Erro')
   }
+}
+
+async function addCoin(coin) {
+  await updateDoc(doc(db, 'users', 'ENEiOpYQoYZY7EH6YZUW1ZhQNxj1'), {
+    wallet: arrayUnion(coin)
+  })
 }
 
 function scrollToTop() {

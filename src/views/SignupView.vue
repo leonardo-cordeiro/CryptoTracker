@@ -81,7 +81,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useStore } from '@/stores/counter.js'
+import { useStore } from '@/stores/users.js'
 
 const register_form = ref({})
 const store = useStore()

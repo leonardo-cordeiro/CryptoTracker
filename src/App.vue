@@ -1,7 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import { onBeforeMount } from 'vue'
-import { useStore } from '@/stores/counter'
+import { useStore } from '@/stores/users'
 
 const store = useStore()
 
