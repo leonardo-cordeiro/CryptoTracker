@@ -2,13 +2,7 @@
   <div class="flex w-full flex-wrap items-center justify-between px-3">
     <div>
       <a href="/">
-        <img
-          class="mr-2"
-          src="src/img/logo.png"
-          style="height: 80px"
-          alt="TE Logo"
-          loading="lazy"
-        />
+        <img class="mr-2" src="/img/logo.png" style="height: 80px" alt="TE Logo" loading="lazy" />
       </a>
     </div>
 

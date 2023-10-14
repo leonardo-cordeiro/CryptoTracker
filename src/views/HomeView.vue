@@ -5,10 +5,10 @@
       v-show="showScrollButton"
       @click="scrollToTop"
     >
-      <img src="src/icons/up-arrow.png" alt="scroll-up icon" />
+      <img src="/icons/up-arrow.png" alt="scroll-up icon" />
     </button>
 
-    <div class="bg-[url('src/img/background.jpg')] h-screen overflow-hidden">
+    <div class="bg-[url('/img/background.jpg')] h-screen overflow-hidden">
       <nav
         :class="[navClass]"
         class="fixed flex z-30 sm:bg-opacity-90 w-full flex-wrap items-center justify-between hover:text-neutral-700 focus:text-neutral-700 lg:py-2"
@@ -68,7 +68,7 @@
           </div>
         </div>
         <img
-          src="src/img/crypto_set-removebg-preview.png"
+          src="/img/crypto_set-removebg-preview.png"
           alt="Product screenshot"
           class="w-[50rem] ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0 sm:mt-0 lg:mt-60 xl:mt-40"
         />
@@ -88,7 +88,7 @@
             title="Watchlist:"
             description="Create a personalized watchlist of your favorite cryptocurrencies, keeping them at
                   your fingertips for quick reference."
-            img="src/icons/research.png"
+            img="/icons/research.png"
             btnText="Get Started"
           />
 
@@ -96,7 +96,7 @@
             title="Multiple Cryptocurrencies:"
             description="Track a diverse range of cryptocurrencies, from the most popular to emerging
                 altcoins.  Keeping track will never be an issue"
-            img="src/icons/cryptocurrency.png"
+            img="/icons/cryptocurrency.png"
             btnText="Get Started"
           />
 
@@ -104,7 +104,7 @@
             title="Real-Time Price Updates:"
             description="Get instant updates on cryptocurrency prices, ensuring you're always aware of the
                 latest market movements."
-            img="src/icons/time.png"
+            img="/icons/time.png"
             btnText="Get Started"
           />
         </div>

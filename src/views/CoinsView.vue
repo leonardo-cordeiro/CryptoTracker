@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex-col flex font-mukta bg-repeat bg-[url('src/img/background.jpg')]">
+  <div class="min-h-screen flex-col flex font-mukta bg-repeat bg-[url('/img/background.jpg')]">
     <button
       @click="logout"
       class="text-white bg-blue-600 p-1 rounded-md mt-5 w-20 items-end ml-40 xl:ml-8 md:ml-8"
@@ -13,7 +13,7 @@
       v-show="showScrollButton"
       @click="scrollToTop"
     >
-      <img src="src/icons/up-arrow.png" alt="scroll-up icon" />
+      <img src="/icons/up-arrow.png" alt="scroll-up icon" />
     </button>
 
     <div class="flex-col flex items-center font-mukta">

@@ -5,7 +5,7 @@
     >
       <div class="flex flex-row pr-3 space-x-4 sm:space-x-8">
         <div class="flex items-center justify-center flex-shrink-0 w-48">
-          <a href="/"><img class="" src="src/img/logo.png" alt="" /></a>
+          <a href="/"><img class="" src="/img/logo.png" alt="" /></a>
         </div>
         <ul class="flex flex-wrap items-center space-x-4 sm:space-x-8">
           <li class="bg-gray-900 p-2 rounded hover:text-white">
@@ -24,7 +24,7 @@
             rel="noopener noreferrer"
             href="https://www.linkedin.com/in/leonardo-cordeiro28/"
             target="_blank"
-            ><img class="h-10" src="src/icons/linkedin.png" alt="logo linkedin"
+            ><img class="h-10" src="/icons/linkedin.png" alt="logo linkedin"
           /></a>
         </li>
         <li>
@@ -32,7 +32,7 @@
             rel="noopener noreferrer"
             href="https://github.com/leonardo-cordeiro/CryptoTracker"
             target="_blank"
-            ><img class="h-10 bg-white rounded-full" src="src/icons/github.png" alt="logo github"
+            ><img class="h-10 bg-white rounded-full" src="/icons/github.png" alt="logo github"
           /></a>
         </li>
         <li>
@@ -40,7 +40,7 @@
             rel="noopener noreferrer"
             href="https://www.upwork.com/freelancers/~017638c917b8a10f78"
             target="_blank"
-            ><img class="h-10" src="src/icons/upwork.png" alt=""
+            ><img class="h-10" src="/icons/upwork.png" alt=""
           /></a>
         </li>
       </ul>
